@@ -4,14 +4,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link rel="stylesheet" type="text/css" href="Style.css">
     <title>Register</title>
 
 </head>
 <center><body>
-    <form id="form1" runat="server" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: medium; font-style: normal; font-weight: bold; color: #FFFFFF;">
+    <form id="form1" runat="server" style="background-position: center center; background-image: url('photo-1531297484001-80022131f5a1.jpeg'); background-repeat: repeat; background-attachment: inherit; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: medium; font-style: normal; font-weight: bold; color: #FFFFFF; background-color: #000000;">
         <div>
-                        <asp:ImageButton ID="homeBtn" runat="server" Height="150px"  ImageUrl="logo.png" Width="180px" OnClick="ImageButton1_Click" />
+                        <img src="logo.png" style="align-content:center; width: 150px; height :135px;" />
 
             <br />
             <br />
