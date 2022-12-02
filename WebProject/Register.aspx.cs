@@ -18,5 +18,10 @@ namespace WebProject
             Response.Redirect("LoginForm.aspx");
 
         }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("~/Home.aspx");
+        }
     }
 }

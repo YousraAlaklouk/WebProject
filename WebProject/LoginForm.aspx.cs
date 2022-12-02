@@ -13,5 +13,20 @@ namespace WebProject
         {
 
         }
+
+        protected void LoginBut_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void registerBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Register.aspx");
+        }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("~/Home.aspx");
+        }
     }
 }
