@@ -83,10 +83,10 @@
             </asp:TableRow>
             <asp:TableRow runat="server">
                 <asp:TableCell runat="server">
-                    <asp:Button ID="RegisterBut" runat="server" Text="Register" />
+                    <asp:Button ID="RegisterBut" runat="server" Text="Register" OnClick="RegButt_Click"/>
 </asp:TableCell>
                 <asp:TableCell runat="server">
-                    <asp:Button ID="CancelBut" runat="server" Text="Cancel" />
+                    <asp:Button ID="CancelBut" runat="server" Text="Cancel" OnClick="CancButt_Click" />
 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
