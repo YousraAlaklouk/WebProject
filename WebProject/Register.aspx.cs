@@ -29,10 +29,10 @@ namespace WebProject
         {
             Response.Write("<script>alert('Canceled');</script>");
         }
-        public void logo_Click(object sender, EventArgs e)
+/*        public void logo_Click(object sender, EventArgs e)
         {
             Response.Redirect("Home.html");
 
-        }
+        }*/
     }
 }

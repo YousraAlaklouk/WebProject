@@ -10,7 +10,7 @@
 <center><body>
     <form id="form1" runat="server" style="background-position: center center; background-image: url('photo-1531297484001-80022131f5a1.jpeg'); background-repeat: repeat; background-attachment: inherit; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: medium; font-style: normal; font-weight: bold; color: #FFFFFF; background-color: #000000;">
         <div>
-                        <img src="logo.png" style="align-content:center; width: 150px; height :135px;" />
+                        <img src="logo.png" style="align-content:center; width: 150px; height :135px;" onclick="logo_Click" />
 
             <br />
             <br />
