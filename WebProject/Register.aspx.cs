@@ -33,6 +33,15 @@ namespace WebProject
             Response.Redirect("Home.html");
 
         }
+
+        protected void CancelBut_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Home.html");
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+        }
         public void CancelBut_Click(object sender, EventArgs e)
         {
 

@@ -69,6 +69,7 @@
                     <asp:Label ID="Label7" runat="server" Text="Password"></asp:Label>
 </asp:TableCell>
                 <asp:TableCell runat="server">
+                    <asp:TextBox ID="txtPass" runat="server" TextMode="Password"></asp:TextBox>
                     <asp:TextBox ID="txtPass" runat="server" TextMode="Password" ReadOnly="False"></asp:TextBox>
 
 </asp:TableCell>
