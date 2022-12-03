@@ -70,7 +70,6 @@
 </asp:TableCell>
                 <asp:TableCell runat="server">
                     <asp:TextBox ID="txtPass" runat="server" TextMode="Password"></asp:TextBox>
-                    <asp:TextBox ID="txtPass" runat="server" TextMode="Password" ReadOnly="False"></asp:TextBox>
 
 </asp:TableCell>
             </asp:TableRow>
