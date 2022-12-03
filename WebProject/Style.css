@@ -3,7 +3,9 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background
+    color: white;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 #menu {
     font-family: 'Comic Sans MS';
@@ -12,3 +14,7 @@
     margin: 10px;
     padding-left: 25px;
 }
+h3{
+    color:white;
+}
+
