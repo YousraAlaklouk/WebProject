@@ -68,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutUs.html" />
-    <Content Include="ContactUs.html" />
+    <Content Include="ContactUss.html" />
     <Content Include="Home.html" />
     <Content Include="LoginForm.aspx" />
     <Content Include="logo.png" />
