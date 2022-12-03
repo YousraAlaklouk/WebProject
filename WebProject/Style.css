@@ -10,9 +10,12 @@
     color: white;
     font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
-    float:left;
-    position:fixed;
-    margin-right:160px;
+}
+
+ul li{
+    display:inline-block;
+    top:0;
+    align-content:center;
 }
 
 #menu {
@@ -22,9 +25,6 @@
     margin: 10px;
     padding-left: 25px;
     padding: 10px;
-    float: right;
-    position: fixed;
-    right: 0;
 }
 
 ul {
@@ -32,7 +32,7 @@ ul {
 }
 
 #menu li a {
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
     text-decoration: none;
     display:block;
@@ -42,7 +42,6 @@ ul {
     margin:10px;
     text-decoration: none;
     border-radius: 10px 10px 10px 10px;
-    float: right;
 }
 
 h3{

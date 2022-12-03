@@ -34,6 +34,11 @@ namespace WebProject
 
         }
 
+        protected void CancelBut_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("LoginForm.aspx");
+
+        }
 
 
     }

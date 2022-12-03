@@ -11,7 +11,7 @@
 <center><body>
     <form id="form1" runat="server" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: medium; font-style: normal; font-weight: bold; color: #FFFFFF; margin-top: 0px;">
         <div>
-                        <asp:ImageButton ID="homeBtn" runat="server" Height="150px"  ImageUrl="logo.png" Width="180px" OnClick="ImageButton1_Click" />
+                        <asp:ImageButton ID="homeBtn" runat="server" ImageUrl="logo.png" width="200px" height="166px" OnClick="ImageButton1_Click" />
 
             <br />
             <br />
