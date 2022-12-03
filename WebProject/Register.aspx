@@ -35,7 +35,7 @@
                     <asp:Label ID="Label3" runat="server" Text="Email"></asp:Label>
 </asp:TableCell>
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtEmail" runat="server" TextMode="Email"></asp:TextBox>
 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">
@@ -51,8 +51,7 @@
                     <asp:Label ID="Label5" runat="server" Text="Birth Date"></asp:Label>
 </asp:TableCell>
                 <asp:TableCell runat="server">
-                    <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar> 
-
+                    <asp:TextBox ID="txtBirthDate" runat="server" TextMode="Date"></asp:TextBox>
 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">
@@ -70,7 +69,8 @@
                     <asp:Label ID="Label7" runat="server" Text="Password"></asp:Label>
 </asp:TableCell>
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtPass" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPass" runat="server" TextMode="Password" ReadOnly="False"></asp:TextBox>
+
 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">
@@ -78,7 +78,8 @@
                     <asp:Label ID="Label8" runat="server" Text="Password Confirmation"></asp:Label>
 </asp:TableCell>
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtConfPass" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtConfPass" runat="server" TextMode="Password"></asp:TextBox>
+
 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">

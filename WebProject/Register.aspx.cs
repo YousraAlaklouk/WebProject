@@ -33,5 +33,15 @@ namespace WebProject
             Response.Redirect("Home.html");
 
         }
+        public void CancelBut_Click(object sender, EventArgs e)
+        {
+
+            Response.Write("<script>alert('Cancelled');</script>");
+
+            Response.Redirect("Home.html");
+
+        }
+
+
     }
 }
