@@ -3,10 +3,18 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    
+}
+
+#content {
     color: white;
     font-size: 18px;
-    font-family:'Times New Roman', Times, serif
+    font-family: 'Times New Roman', Times, serif;
+    float:left;
+    position:fixed;
+    margin-right:160px;
 }
+
 #menu {
     font-family: 'Comic Sans MS';
     letter-spacing: 0.3em;
