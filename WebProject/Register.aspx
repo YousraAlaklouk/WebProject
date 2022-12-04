@@ -8,26 +8,30 @@
     <title>Register</title>
 
 </head>
-<center><body>
-    <form id="form1" runat="server" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: medium; font-style: normal; font-weight: bold; color: #FFFFFF;">
-        <div>
-            <asp:ImageButton ID="homeBtn" runat="server" ImageUrl="logo.png" width="200px" height="166px" OnClick="ImageButton1_Click" />
 
-            <br />
-            <br />
-            <br />
-            <br />
+<center><body>
+    <form id="form1" runat="server" style=" font-size: medium; font-style: normal; font-weight: bold; color: #FFFFFF;">
+        <div>
+            <asp:ImageButton ID="homeBtn" runat="server" ImageUrl="logo.png" width="200px" height="166px" OnClick="ImageButton1_Click" CausesValidation="false"/>
+            <div id="menu">
+                <ul>
+                    <li><a href="AboutUs.html">About us</a></li>
+                    <li><a href="ContactUss.html"> Contact Us</a></li>
+                    <li><a href="LoginForm.aspx">Login</a></li>
+                </ul>
+            </div>
              <center> <asp:Label ID="Label1" runat="server" Text="Register" font-size="Large" ></asp:Label></center>
         </div>
         <center> 
-        <asp:Table ID="Table1" runat="server" Height="787px" Width="1058px" style="margin-left:25%;">
+        <asp:Table ID="Table1" runat="server" Height="787px" Width="976px" style="margin-left:25%; margin-bottom: 0px;">
 
             <asp:TableRow runat="server">
                 <asp:TableCell runat="server">
                     <asp:Label ID="Label2" runat="server" Text="UserName"></asp:Label>
 </asp:TableCell>
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox><asp:RequiredFieldValidator ID="UserName" runat="server" ControlToValidate="txtUserName" ErrorMessage="Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox><br />
+                    <asp:RequiredFieldValidator ID="UserName" runat="server" ControlToValidate="txtUserName" ErrorMessage="Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">
@@ -35,7 +39,8 @@
                     <asp:Label ID="Label3" runat="server" Text="Email"></asp:Label>
 </asp:TableCell>
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtEmail" runat="server" TextMode="Email"></asp:TextBox><asp:RequiredFieldValidator ID="Email" runat="server" ControlToValidate="txtEmail" ErrorMessage="Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="txtEmail" runat="server" TextMode="Email"></asp:TextBox><br />
+                    <asp:RequiredFieldValidator ID="Email" runat="server" ControlToValidate="txtEmail" ErrorMessage="Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">
@@ -69,16 +74,22 @@
                     <asp:Label ID="Label7" runat="server" Text="Password"></asp:Label>
 </asp:TableCell>
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtPass" runat="server" TextMode="Password"></asp:TextBox><asp:RequiredFieldValidator ID="Password" runat="server" ControlToValidate="txtPass" ErrorMessage="Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="txtPass" runat="server" TextMode="Password"></asp:TextBox><br />
+                    <asp:RequiredFieldValidator ID="Password" runat="server" ControlToValidate="txtPass" ErrorMessage="Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
 
 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">
                 <asp:TableCell runat="server">
                     <asp:Label ID="Label8" runat="server" Text="Password Confirmation"></asp:Label>
+                    <br />
+                    <br />
+                    <br />
 </asp:TableCell>
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtConfPass" runat="server" TextMode="Password"></asp:TextBox><asp:RequiredFieldValidator ID="ConfPassword" runat="server" ControlToValidate="txtConfPass" ErrorMessage="Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="txtConfPass" runat="server" TextMode="Password"></asp:TextBox><br />
+                    <asp:RequiredFieldValidator ID="passConfVal" runat="server" ControlToValidate="txtConfPass" ErrorMessage="Required Field" ForeColor="Red"></asp:RequiredFieldValidator><br />
+                    <asp:CompareValidator ID="passConfCom" runat="server" ControlToCompare="txtPass" ControlToValidate="txtConfPass" ErrorMessage="Please write the same password" ForeColor="Red"></asp:CompareValidator>
 
 </asp:TableCell>
             </asp:TableRow>
@@ -87,7 +98,7 @@
                     <asp:Button ID="RegisterBut" runat="server" Text="Register" OnClick="RegisterBut_Click"/>
 </asp:TableCell>
                 <asp:TableCell runat="server">
-                    <asp:Button ID="CancelBut" runat="server" Text="Cancel" OnClick="CancelBut_Click"/>
+                    <asp:Button ID="CancelBut" runat="server" Text="Cancel" OnClick="CancelBut_Click" CausesValidation="false"/>
 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
@@ -96,7 +107,7 @@
         <br />
         <br />
         <br />
-        Have an Account?<asp:Button ID="LoginBut" runat="server" Text="Login" OnClick="LoginBut_Click" />
+        Have an Account?<asp:Button ID="LoginBut" runat="server" Text="Login" OnClick="LoginBut_Click" CausesValidation="false" />
         <br />
         <br />
         <br />
