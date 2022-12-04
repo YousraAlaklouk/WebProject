@@ -43,3 +43,8 @@ h3{
     color:white;
 }
 
+.wrap {
+    float: left;
+    margin-bottom: auto;
+    margin-right: 15px;
+}
