@@ -28,11 +28,7 @@ namespace WebProject
         {
             Response.Redirect("~/LoginForm.aspx");
         }
-        public void logo_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Home.html");
 
-        }
 
         protected void CancelBut_Click(object sender, EventArgs e)
         {
