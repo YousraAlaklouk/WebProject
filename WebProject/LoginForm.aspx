@@ -26,7 +26,7 @@
 
             <asp:TableRow runat="server">
                 <asp:TableCell runat="server">
-                    <asp:Label ID="Label2" runat="server" Text="UserName"></asp:Label>
+                    <asp:Label ID="Label2" runat="server" Text="UserName Or Email"></asp:Label>
                     <br />
                     <br />
 </asp:TableCell>
@@ -43,9 +43,9 @@
                     <br />
 </asp:TableCell>
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtConfPass" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPass" runat="server" TextMode="Password"></asp:TextBox>
                     <br />
-                    <asp:RequiredFieldValidator ID="passVal" runat="server" ControlToValidate="txtConfPass" ErrorMessage="Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="passVal" runat="server" ControlToValidate="txtPass" ErrorMessage="Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>

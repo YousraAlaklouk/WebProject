@@ -87,13 +87,13 @@ namespace WebProject
         protected global::System.Web.UI.WebControls.Label Label8;
 
         /// <summary>
-        /// txtConfPass control.
+        /// txtPass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtConfPass;
+        protected global::System.Web.UI.WebControls.TextBox txtPass;
 
         /// <summary>
         /// passVal control.

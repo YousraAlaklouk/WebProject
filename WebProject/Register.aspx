@@ -64,9 +64,9 @@
                     <asp:Label ID="Label6" runat="server" Text="Gender"></asp:Label>
 </asp:TableCell>
                 <asp:TableCell runat="server">
-                    <asp:RadioButton ID="Male" runat="server" Text="Male" />
-<asp:RadioButton ID="Female" runat="server" Text="Female" />
-<asp:RadioButton ID="NotToSay" runat="server" Text="Rather Not To Say" />
+                    <asp:RadioButton ID="Male" runat="server" Text="Male" GroupName="Gender" />
+<asp:RadioButton ID="Female" runat="server" Text="Female" GroupName="Gender" />
+<asp:RadioButton ID="NotToSay" runat="server" Text="Rather Not To Say" GroupName="Gender" />
 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">
