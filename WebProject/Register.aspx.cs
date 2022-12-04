@@ -114,7 +114,5 @@ namespace WebProject
             Response.Write("<script>alert('Cancelled );</script>");
 
         }
-
-
     }
 }

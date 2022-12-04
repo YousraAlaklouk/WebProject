@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows.Forms;
 
 
 namespace WebProject
@@ -100,6 +101,19 @@ namespace WebProject
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
             Response.Redirect("~/Home.html");
+        }
+
+        private void check()
+        {
+            string pass = con.getInfo("select * from Customer where UserName = '" + txtUserName.Text + "'", "Password");
+            if(pass == txtConfPass.Text)
+            {
+                Response.Redirect("~/Home.html");
+            }
+            else
+            {
+                MessageBox.Show("username or password incorrect");
+            }
         }
     }
 }
