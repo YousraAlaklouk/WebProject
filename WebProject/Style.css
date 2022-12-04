@@ -3,7 +3,7 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    
+    font-family: 'Times New Roman', Times, serif;
 }
 
 #content {
@@ -12,19 +12,15 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-ul li{
-    display:inline-block;
-    top:0;
-    align-content:center;
+ul li {
+    display: inline-block;
+    top: 0;
+    align-content: center;
 }
 
 #menu {
-    font-family: 'Comic Sans MS';
     letter-spacing: 0.3em;
     word-spacing: 0.2em;
-    margin: 10px;
-    padding-left: 25px;
-    padding: 10px;
 }
 
 ul {
@@ -35,11 +31,10 @@ ul {
     font-size: 12px;
     text-align: center;
     text-decoration: none;
-    display:block;
+    display: block;
     background-color: lightgray;
     color: black;
     padding: 10px 10px 10px 25px;
-    margin:10px;
     text-decoration: none;
     border-radius: 10px 10px 10px 10px;
 }

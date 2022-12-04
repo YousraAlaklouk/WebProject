@@ -222,13 +222,22 @@ namespace WebProject
         protected global::System.Web.UI.WebControls.TextBox txtConfPass;
 
         /// <summary>
-        /// ConfPassword control.
+        /// passConfVal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ConfPassword;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator passConfVal;
+
+        /// <summary>
+        /// passConfCom control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator passConfCom;
 
         /// <summary>
         /// RegisterBut control.
