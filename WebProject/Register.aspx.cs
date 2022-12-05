@@ -7,6 +7,8 @@ using System.Data.SqlClient;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Globalization;
+
 
 namespace WebProject
 {
@@ -16,6 +18,7 @@ namespace WebProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
 
         }
         protected void LoginBut_Click(object sender, EventArgs e)
@@ -59,22 +62,38 @@ namespace WebProject
                         command.Parameters.AddWithValue("@gender", "Rather Not To Say");
 
                     }
+                    DateTime now = DateTime.Now;
+                    DateTime givenDate = DateTime.Parse(txtBirthDate.Text);
 
-                    int i = command.ExecuteNonQuery();
-                    if (i != 0)
+                    int days = now.Subtract(givenDate).Days;
+                    double age = Math.Floor(days / 365.24219);
+
+
+                    if (age < 10)
                     {
-
-                        Response.Write("<script>alert('Register successful you can login now');</script>");
-                        // Response.Redirect("~/LoginForm.aspx");
-
+                        Response.Write("<script>alert('you are too yange you can not register');</script>");
 
                     }
                     else
                     {
-                        Response.Write("<script>alert('Register Failed');</script>");
+                        int i = command.ExecuteNonQuery();
 
+                        if (i != 0)
+                        {
+
+                            Response.Write("<script>alert('Register successful you can login now');</script>");
+                            // Response.Redirect("~/LoginForm.aspx");
+
+
+                        }
+                        else
+                        {
+                            Response.Write("<script>alert('Register Failed');</script>");
+
+                        }
                     }
                 }
+
 
                 catch (Exception ex)
                 {

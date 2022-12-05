@@ -25,6 +25,7 @@ namespace WebProject
                     txtPass.Attributes["value"] = Request.Cookies["Password"].Value;
                 }
             }
+            
         }
 
         protected void LoginBut_Click(object sender, EventArgs e)
