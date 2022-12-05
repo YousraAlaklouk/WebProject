@@ -17,7 +17,14 @@ namespace WebProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                if (Request.Cookies["UserName"] != null && Request.Cookies["Password"] != null)
+                {
+                    txtUserName.Text = Request.Cookies["UserName"].Value;
+                    txtPass.Attributes["value"] = Request.Cookies["Password"].Value;
+                }
+            }
         }
 
         protected void LoginBut_Click(object sender, EventArgs e)
@@ -46,6 +53,19 @@ namespace WebProject
                     dr = cmd.ExecuteReader();
                     if (dr.Read())
                     {
+                        if (chkRememberMe.Checked)
+                        {
+                            Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(30);
+                            Response.Cookies["Password"].Expires = DateTime.Now.AddDays(30);
+                        }
+                        else
+                        {
+                            Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(-1);
+                            Response.Cookies["Password"].Expires = DateTime.Now.AddDays(-1);
+                        }
+                        Response.Cookies["UserName"].Value = txtUserName.Text.Trim();
+                        Response.Cookies["Password"].Value = txtPass.Text.Trim();
+
                         Response.Write("<script>alert('Login successful');</script>");
                         Response.Redirect("~/Home.html");
 

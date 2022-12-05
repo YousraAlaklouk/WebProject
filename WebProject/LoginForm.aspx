@@ -50,10 +50,20 @@
             </asp:TableRow>
         </asp:Table>
             </center> 
+                <br />
+
+
+        <asp:Label ID="Label9" runat="server" Text="Remeber Me"></asp:Label> &nbsp; 
+        <asp:CheckBox ID="chkRememberMe" runat="server" Text=" " ToolTip="If you checked here your user name and password will be saved for your next login"/>
+        <br />
+        <br />
         <br />
         <asp:Button ID="LoginBut" runat="server" Text="Login" Font-Size="Medium" OnClick="LoginBut_Click"/>
-        
         <br />
+        <br />
+
+
+
         <br />
         <asp:Label ID="Label3" runat="server" Text="Not Registered?" ></asp:Label>
         <asp:Button ID="registerBtn" runat="server" Text="Register" CausesValidation="false" Font-Size="Medium" OnClick="registerBtn_Click" />

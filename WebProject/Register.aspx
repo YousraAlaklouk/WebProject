@@ -95,19 +95,20 @@
             </asp:TableRow>
             <asp:TableRow runat="server">
                 <asp:TableCell runat="server">
-                    <asp:Button ID="RegisterBut" runat="server" Text="Register" OnClick="RegisterBut_Click"/>
+                    <asp:Button ID="RegisterBut" runat="server" Text="Register" Font-Size="Medium" OnClick="RegisterBut_Click"/>
 </asp:TableCell>
                 <asp:TableCell runat="server">
-                    <asp:Button ID="CancelBut" runat="server" Text="Cancel" OnClick="CancelBut_Click" CausesValidation="false"/>
+                    <asp:Button ID="CancelBut" runat="server" Text="Cancel" Font-Size="Medium" OnClick="CancelBut_Click" CausesValidation="false"/>
 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
             </center> 
         <br />
         <br />
+
         <br />
         <br />
-        Have an Account?<asp:Button ID="LoginBut" runat="server" Text="Login" OnClick="LoginBut_Click" CausesValidation="false" />
+        Have an Account?<asp:Button ID="LoginBut" runat="server" Text="Login" Font-Size="Medium" OnClick="LoginBut_Click" CausesValidation="false" />
         <br />
         <br />
         <br />
