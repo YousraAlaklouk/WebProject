@@ -103,17 +103,5 @@ namespace WebProject
             Response.Redirect("~/Home.html");
         }
 
-        /*private void check()
-        {
-            string pass = con.getInfo("select * from Customer where UserName = '" + txtUserName.Text + "'", "Password");
-            if(pass == txtConfPass.Text)
-            {
-                Response.Redirect("~/Home.html");
-            }
-            else
-            {
-                MessageBox.Show("username or password incorrect");
-            }
-        }*/
     }
 }
