@@ -50,11 +50,12 @@ h3{
     margin-right: 15px;
 }
 #footer {
-    color: rgb(7, 17, 88);
-    text-decoration: underline;
-    text-align: center;
-    background-color:ThreeDDarkShadow;
-    border: 1px outset rgb(243, 103, 194);
+    background-color: lightgray;
+    height:50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
     #footer a:visited {
@@ -68,3 +69,7 @@ h3{
     #footer a:active {
         color: rgb(255, 0, 0);
     }
+
+#footerImg{
+    float:right;
+}

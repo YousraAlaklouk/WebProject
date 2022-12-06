@@ -117,8 +117,8 @@
     <p>
         &nbsp;</p>
 </body></center>
-    <div id="footer">
-    <p style="float: left; font-size: large;">
+<div id="footer">
+    <p style="float: left; font-size: large;margin-top:12px; margin-bottom:12px;">
         SECURITYS&Y
         <img src="Rights.png" style="width: 30px; height: 20px; vertical-align:bottom" /> 2022
     </p>
