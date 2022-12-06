@@ -12,7 +12,7 @@
 <center><body>
     <form id="form1" runat="server" style=" font-size: medium; font-style: normal; font-weight: bold; color: #FFFFFF;">
         <div>
-            <asp:ImageButton ID="homeBtn" runat="server" ImageUrl="logo.png" width="200px" height="166px" OnClick="ImageButton1_Click" CausesValidation="false"/>
+            <asp:ImageButton ID="homeBtn" runat="server" ImageUrl="logo.png" width="200px" height="150px" OnClick="ImageButton1_Click" CausesValidation="false"/>
             <div id="menu">
                 <ul>
                     <li><a href="AboutUs.html">About us</a></li>
@@ -117,4 +117,16 @@
     <p>
         &nbsp;</p>
 </body></center>
+    <div id="footer">
+    <p style="float: left; font-size: large;">
+        SECURITYS&Y
+        <img src="Rights.png" style="width: 30px; height: 20px; vertical-align:bottom" /> 2022
+    </p>
+        
+    <div id="footerImg">
+        <a href="https://maltepe.edu.tr/"> <img id="footerGithub" src="R.png" style="width: 40px; height: 40px; margin-right:10px" /></a>
+        <a href="https://github.com/YousraAlaklouk/WebProject"> <img id="footerGithub" src="GitHub_logo.png" style="width: 40px; height: 40px; " /></a>
+    </div>
+
+</div>
 </html>

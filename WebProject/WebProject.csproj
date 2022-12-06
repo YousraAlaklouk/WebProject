@@ -112,11 +112,14 @@
     <Content Include="aboutus.jpeg" />
     <Content Include="AboutUss.html" />
     <Content Include="ContactUss.html" />
+    <Content Include="GitHub_logo.png" />
     <Content Include="Home.html" />
     <Content Include="LoginForm.aspx" />
     <Content Include="logo.png" />
     <Content Include="photo-1531297484001-80022131f5a1.jpeg" />
+    <Content Include="R.png" />
     <Content Include="Register.aspx" />
+    <Content Include="Rights.png" />
     <Content Include="security.jpg" />
     <Content Include="Style.css" />
     <Content Include="Web.config" />

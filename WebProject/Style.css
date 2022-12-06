@@ -21,6 +21,7 @@ ul li {
 #menu {
     letter-spacing: 0.3em;
     word-spacing: 0.2em;
+    margin-bottom:50px;
 }
 
 ul {
@@ -43,27 +44,29 @@ h3{
     color:white;
 }
 
-.wrap {
-    float: left;
-    margin-bottom: auto;
-    margin-right: 15px;
-}
 #footer {
-    color: rgb(7, 17, 88);
-    text-decoration: underline;
-    text-align: center;
-    background-color:ThreeDDarkShadow;
-    border: 1px outset rgb(243, 103, 194);
+    /*background-color: rgba(0,162,195,255);*/
+    background-color: lightgray;
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display:inline-block;
 }
 
-    #footer a:visited {
-        color: rgb(71, 10, 253);
-    }
+#footer a:visited {
+    color: rgb(71, 10, 253);
+}
 
-    #footer a:link {
-        color: rgb(255, 0, 166);
-    }
+#footer a:link {
+    color: rgb(255, 0, 166);
+}
 
-    #footer a:active {
-        color: rgb(255, 0, 0);
-    }
+#footer a:active {
+    color: rgb(255, 0, 0);
+}
+
+#footerImg {
+    float: right;
+}
