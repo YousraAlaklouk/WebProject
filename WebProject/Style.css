@@ -21,6 +21,7 @@ ul li {
 #menu {
     letter-spacing: 0.3em;
     word-spacing: 0.2em;
+    margin-bottom:50px;
 }
 
 ul {
@@ -48,5 +49,22 @@ h3{
     margin-bottom: auto;
     margin-right: 15px;
 }
+#footer {
+    color: rgb(7, 17, 88);
+    text-decoration: underline;
+    text-align: center;
+    background-color:ThreeDDarkShadow;
+    border: 1px outset rgb(243, 103, 194);
+}
 
+    #footer a:visited {
+        color: rgb(71, 10, 253);
+    }
 
+    #footer a:link {
+        color: rgb(255, 0, 166);
+    }
+
+    #footer a:active {
+        color: rgb(255, 0, 0);
+    }
