@@ -48,5 +48,31 @@ h3{
     margin-bottom: auto;
     margin-right: 15px;
 }
+/*#footer {*/
+
+/*    color: ;
+*/    /*text-decoration: underline;
+    color:aliceblue;
+    text-align: center;
+    background-color: white;
+    border: 1px outset;
+    position:fixed;
+    bottom:0;
+}*/
 
 
+#footer {
+    background-color:aliceblue;
+}
+
+    #footer a:visited {
+        color: rgb(71, 10, 253);
+    }
+
+    #footer a:link {
+        color: rgb(255, 0, 166);
+    }
+
+    #footer a:active {
+        color: rgb(255, 0, 0);
+    }
