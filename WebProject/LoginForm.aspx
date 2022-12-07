@@ -19,7 +19,6 @@
                     <li><a href="Register.aspx">Register</a></li>
                 </ul>
             </div>
-
         </div>
         <center> <asp:Label ID="Label1" runat="server" Text="Log In" font-size="Large"></asp:Label></center>
         <center> 
@@ -54,9 +53,10 @@
                 <br />
 
 
-        <asp:Label ID="Label9" runat="server" Text="Remeber Me"></asp:Label> &nbsp; 
+        <asp:Label ID="Label9" runat="server" Text="Remember Me"></asp:Label> &nbsp; 
         <asp:CheckBox ID="chkRememberMe" runat="server" Text=" " ToolTip="If you checked here your user name and password will be saved for your next login"/>
         <br />
+        <asp:LinkButton ID="PassLBtn" runat="server" OnClick="PassLBtn_Click">Forgot Password</asp:LinkButton>
         <br />
         <br />
         <asp:Button ID="LoginBut" runat="server" Text="Login" Font-Size="Medium" OnClick="LoginBut_Click"/>

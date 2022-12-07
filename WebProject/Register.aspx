@@ -27,10 +27,10 @@
 
             <asp:TableRow runat="server">
                 <asp:TableCell runat="server">
-                    <asp:Label ID="Label2" runat="server" Text="UserName"></asp:Label>
+                    <asp:Label ID="Label2" runat="server" Text="UserName" ></asp:Label>
 </asp:TableCell>
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox><br />
+                    <asp:TextBox ID="txtUserName" runat="server" ></asp:TextBox><br />
                     <asp:RequiredFieldValidator ID="UserName" runat="server" ControlToValidate="txtUserName" ErrorMessage="Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
 </asp:TableCell>
             </asp:TableRow>

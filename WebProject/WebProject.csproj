@@ -112,10 +112,12 @@
     <Content Include="aboutus.jpeg" />
     <Content Include="AboutUss.html" />
     <Content Include="ContactUss.html" />
+    <Content Include="ForgotPassword.aspx" />
     <Content Include="GitHub_logo.png" />
     <Content Include="Home.html" />
     <Content Include="LoginForm.aspx" />
     <Content Include="logo.png" />
+    <Content Include="PasswordCode.aspx" />
     <Content Include="photo-1531297484001-80022131f5a1.jpeg" />
     <Content Include="R.png" />
     <Content Include="Register.aspx" />
@@ -125,6 +127,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordCode.aspx.cs">
+      <DependentUpon>PasswordCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PasswordCode.aspx.designer.cs">
+      <DependentUpon>PasswordCode.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SQLCon.cs" />
     <Compile Include="LoginForm.aspx.cs">
       <DependentUpon>LoginForm.aspx</DependentUpon>

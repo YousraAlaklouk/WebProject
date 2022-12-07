@@ -11,7 +11,7 @@ namespace WebProject
 {
 
 
-    public partial class LoginForm
+    public partial class ForgotPassword
     {
 
         /// <summary>
@@ -60,40 +60,13 @@ namespace WebProject
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// txtUserName control.
+        /// passTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUserName;
-
-        /// <summary>
-        /// userNameVal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator userNameVal;
-
-        /// <summary>
-        /// Label8 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label8;
-
-        /// <summary>
-        /// txtPass control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPass;
+        protected global::System.Web.UI.WebControls.TextBox passTxt;
 
         /// <summary>
         /// passVal control.
@@ -105,57 +78,48 @@ namespace WebProject
         protected global::System.Web.UI.WebControls.RequiredFieldValidator passVal;
 
         /// <summary>
-        /// Label9 control.
+        /// Label8 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label9;
+        protected global::System.Web.UI.WebControls.Label Label8;
 
         /// <summary>
-        /// chkRememberMe control.
+        /// conPassTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkRememberMe;
+        protected global::System.Web.UI.WebControls.TextBox conPassTxt;
 
         /// <summary>
-        /// PassLBtn control.
+        /// conPassVal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton PassLBtn;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator conPassVal;
 
         /// <summary>
-        /// LoginBut control.
+        /// passConfCom control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LoginBut;
+        protected global::System.Web.UI.WebControls.CompareValidator passConfCom;
 
         /// <summary>
-        /// Label3 control.
+        /// resetPassBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
-
-        /// <summary>
-        /// registerBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button registerBtn;
+        protected global::System.Web.UI.WebControls.Button resetPassBtn;
     }
 }
