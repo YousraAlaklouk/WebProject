@@ -82,7 +82,7 @@
 
             <asp:TableRow runat="server">
                 <asp:TableCell runat="server">
-                    <asp:Button ID="UpdateBut" runat="server" Text="Update" Font-Size="Medium" />
+                    <asp:Button ID="UpdateBut" runat="server" Text="Update" Font-Size="Medium" OnClick="UpdateBut_Click"/>
 </asp:TableCell>
                 <asp:TableCell runat="server">
                     <asp:Button ID="CancelBut" runat="server" Text="Cancel" Font-Size="Medium"  CausesValidation="false"/>
