@@ -36,10 +36,12 @@
             <table class="auto-style1"  >
 
             <td>
-            <asp:Button ID="TestBut1" runat="server" Text="Start Test 1" Font-Bold="True" />
+            <asp:Button ID="TestBut1" runat="server" Text="T1136.001\Create Account: Local Account" Font-Bold="True" OnClick="TestBut1_Click"/>
+                <br />
+                <asp:Button ID="delBtn" runat="server" Text="T1136.001\Delete Account: Local Account" Font-Bold="True" OnClick="delBtn_Click"/>
                 </td>
                 <td>
-            <asp:Button ID="TestBut2" runat="server" Text="Start Test 2" Font-Bold="True" />
+            <asp:Button ID="TestBut2" runat="server" Text="T1115\Clipboard Data" Font-Bold="True" OnClick="TestBut2_Click" />
                     </td>
 
 </table>
