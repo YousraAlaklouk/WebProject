@@ -36,8 +36,8 @@ namespace WebProject
                 try
                 {
                     SqlCommand command = new SqlCommand("UPDATE Customer SET FullName  = " + txtFullName.Text + ", BirthDate =" + txtBirthDate.Text + ", Gender = @gender WHERE Email = @email OR UserName = @name", connection1);
-                    command.Parameters.AddWithValue("@email", LoginForm.email);
-                    command.Parameters.AddWithValue("@name", LoginForm.email);
+                    command.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
+                    command.Parameters.AddWithValue("@name", txtUserName.Text.Trim());
                     if (Female.Checked)
                     {
                         command.Parameters.AddWithValue("@gender", female);
