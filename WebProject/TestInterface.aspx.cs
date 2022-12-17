@@ -13,7 +13,7 @@ namespace WebProject
 {
     public partial class TestInterface : System.Web.UI.Page
     {
-        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-UJH3HOQ\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-CNJT2HB\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True");
         protected void Page_Load(object sender, EventArgs e)
         {
             if(ReadData("select R.ID from Result as R inner join Customer as C on R.CustomerID = C.CustomerID where R.TestID = 'T1136.001' and(C.UserName = '"+LoginForm.email+"' or C.Email = '"+LoginForm.email+"')"))
@@ -78,7 +78,7 @@ namespace WebProject
         public bool ReadData(string query)
         {
             bool check = false;
-            string connectionString = "server=DESKTOP-UJH3HOQ\\SQLEXPRESS;database=SecurityS&Y;Trusted_Connection=True;";
+            string connectionString = "Data Source=DESKTOP-CNJT2HB\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
@@ -106,7 +106,7 @@ namespace WebProject
         public string GetData(string query)
         {
             string id = "" ;
-            string connectionString = "server=DESKTOP-UJH3HOQ\\SQLEXPRESS;database=SecurityS&Y;Trusted_Connection=True;";
+            string connectionString = "Data Source=DESKTOP-CNJT2HB\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);

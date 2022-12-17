@@ -14,7 +14,7 @@ namespace WebProject
 
     public partial class UserEdit : System.Web.UI.Page
     {
-        SqlConnection connection1 = new SqlConnection("Data Source=DESKTOP-UJH3HOQ\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True");
+        SqlConnection connection1 = new SqlConnection("Data Source=DESKTOP-CNJT2HB\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True");
         private string email = LoginForm.email;
         protected void Page_Load(object sender, EventArgs e)
             {
@@ -131,55 +131,3 @@ namespace WebProject
         }
     }
 }
-                /*                
-
-                                    SqlCommand command = new SqlCommand("SELECT UserName FROM Customer WHERE Email=" + LoginForm.email.ToString() + " OR UserName =" + LoginForm.email.ToString() + " ", connection1);
-                                    txtUserName.Text = command.ExecuteScalar().ToString();
-
-                                    SqlCommand command2 = new SqlCommand("SELECT FullName FROM Customer WHERE Email=" + LoginForm.email.ToString()+ " OR UserName =" + LoginForm.email.ToString() + " ", connection1);
-                                    txtFullName.Text = command2.ExecuteScalar().ToString();
-
-                                    SqlCommand command3 = new SqlCommand("SELECT BirthDate FROM Customer WHERE Email=" + LoginForm.email.ToString() + " OR UserName =" + LoginForm.email.ToString()+ " ", connection1);
-                                    txtBirthDate.Text = command3.ExecuteScalar().ToString();
-
-
-                                    SqlCommand command4 = new SqlCommand("SELECT Gender FROM Customer WHERE Email=" + LoginForm.email.ToString() + " OR UserName =" + LoginForm.email.ToString() + " ", connection1);
-                                    if (command4.ExecuteScalar().ToString() == "Female")
-                                    {
-                                        Female.Checked = true;
-
-                                    }
-                                    else if (command4.ExecuteScalar().ToString() == "Male")
-                                    {
-                                        Male.Checked = true;
-                                    }
-                                    else
-                                    {
-                                        NotToSay.Checked = true;
-
-                                    }
-                                    SqlCommand command5 = new SqlCommand("SELECT Password FROM Customer WHERE Email=" + LoginForm.email.ToString() + " OR UserName =" +LoginForm.email.ToString()+" ", connection1);
-                                    txtPass.Text = command5.ExecuteScalar().ToString();
-                */
-                /*                        using (SqlDataReader sdr = command.ExecuteReader())
-                {
-                    txtEmail.Text = sdr["Email"].ToString();
-                    txtUserName.Text = sdr["UserName"].ToString();
-                    txtFullName.Text = sdr["FullName"].ToString();
-                    txtBirthDate.Text = sdr["Birthdate"].ToString();
-                    if (sdr["Gender"].ToString() == "Female")
-                    {
-                        Female.Checked = true;
-
-                    }
-                    else if (sdr["Gender"].ToString() == "Male")
-                    {
-                        Male.Checked = true;
-                    }
-                    else
-                    {
-                        NotToSay.Checked = true;
-
-                    }
-                    txtPass.Text = sdr["Password"].ToString();
-                }*/
