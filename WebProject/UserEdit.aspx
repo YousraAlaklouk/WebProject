@@ -22,7 +22,7 @@
 
                              <br />
                              <br />
-
+            <asp:Button ID="LoadDataBut" runat="server" Text="Load Your data" OnClick="LoadDataBut_Click" />
             <asp:Table ID="Table1" runat="server" Height="735px" Width="1147px" style="margin-left:35%; margin-right:25%; margin-bottom: 0px;">
 
             <asp:TableRow runat="server">

@@ -124,6 +124,7 @@
     <Content Include="Rights.png" />
     <Content Include="security.jpg" />
     <Content Include="Style.css" />
+    <Content Include="TestInterface.aspx" />
     <Content Include="UserEdit.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -157,6 +158,13 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestInterface.aspx.cs">
+      <DependentUpon>TestInterface.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestInterface.aspx.designer.cs">
+      <DependentUpon>TestInterface.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserEdit.aspx.cs">
       <DependentUpon>UserEdit.aspx</DependentUpon>
