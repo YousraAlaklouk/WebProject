@@ -14,8 +14,8 @@ namespace WebProject
 
     public partial class UserEdit : System.Web.UI.Page
     {
-        SqlConnection connection1 = new SqlConnection("Data Source=DESKTOP-CNJT2HB\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True");
-
+        SqlConnection connection1 = new SqlConnection("Data Source=DESKTOP-UJH3HOQ\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True");
+        private string email = LoginForm.email;
         protected void Page_Load(object sender, EventArgs e)
             {
             }
@@ -35,38 +35,30 @@ namespace WebProject
             {
                 try
                 {
-                    SqlCommand command = new SqlCommand("UPDATE Customer SET FullName  = " + txtFullName.Text + ", BirthDate =" + txtBirthDate.Text + ", Gender = @gender WHERE Email = @email OR UserName = @name", connection1);
-                    command.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
-                    command.Parameters.AddWithValue("@name", txtUserName.Text.Trim());
+                    SqlCommand command = new SqlCommand("UPDATE Customer SET FullName  = '" + txtFullName.Text + "', BirthDate ='" + txtBirthDate.Text + "', Gender = @gender WHERE Email = @email OR UserName = @name", connection1);
+                    command.Parameters.AddWithValue("@email", email);
+                    command.Parameters.AddWithValue("@name", email);
                     if (Female.Checked)
                     {
                         command.Parameters.AddWithValue("@gender", female);
-
                     }
                     else if (Male.Checked)
                     {
                         command.Parameters.AddWithValue("@gender", male);
-
                     }
                     else
                     {
                         command.Parameters.AddWithValue("@gender", neither);
-
                     }
-
-                    int i = command.ExecuteNonQuery();
-
-                    if (i != 0)
+                    command.ExecuteNonQuery();
+                    //int i = command.ExecuteNonQuery();
+                    if (command.ExecuteNonQuery() != 0)
                     {
                         Response.Write("<script>alert('Upadated Seccufully ');</script>");
-
                     }
-
-
-                    else
+                    else if(command.ExecuteNonQuery() == 0)
                     {
                         Response.Write("<script>alert('Failed Try Again Later');</script>");
-
                     }
                 }
                 catch (Exception ex)
@@ -76,10 +68,7 @@ namespace WebProject
                 finally
                 {
                     connection1.Close();
-
                 }
-
-
             }
         }
         protected void LoadDataBut_Click(object sender, EventArgs e)
@@ -90,15 +79,13 @@ namespace WebProject
 
             if (connection1.State == ConnectionState.Open)
             {
-
                 try
                 {
-
                     string query = "SELECT Email,UserName , FullName,BirthDate, Gender,Password FROM Customer WHERE Email = @em OR UserName = @us";
 
                     SqlCommand command = new SqlCommand(query, connection1);
-                    command.Parameters.AddWithValue("@em", LoginForm.email);
-                    command.Parameters.AddWithValue("@us", LoginForm.email);
+                    command.Parameters.AddWithValue("@em", email);
+                    command.Parameters.AddWithValue("@us", email);
                     command.CommandType = CommandType.Text;
                     dr = command.ExecuteReader();
                     if (dr.Read())
@@ -127,7 +114,7 @@ namespace WebProject
                     }
                     else
                     {
-                        Response.Write("<script>alert('wrong ');</script>");
+                        Response.Write("<script>alert('"+LoginForm.email+"');</script>");
 
                     }
 
@@ -139,14 +126,7 @@ namespace WebProject
                 finally
                 {
                     connection1.Close();
-
-
                 }
-
-
-
-
-
             }
         }
     }

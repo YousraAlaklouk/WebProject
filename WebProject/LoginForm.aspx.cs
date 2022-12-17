@@ -16,7 +16,7 @@ namespace WebProject
 {
     public partial class LoginForm : System.Web.UI.Page
     {
-        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-CNJT2HB\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-UJH3HOQ\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True");
         public static int value = 0;
         public static string email = "";
         private bool check = true;
@@ -45,17 +45,11 @@ namespace WebProject
                 // check for the user name and the password
                 try
                 {
-
                     SqlCommand cmd = new SqlCommand("SELECT * FROM Customer WHERE (Username = @Username OR Email= @email ) " +
                         "AND Password =@pass ", connection);
                     cmd.Parameters.AddWithValue("@username", txtUserName.Text);
                     cmd.Parameters.AddWithValue("@email", txtUserName.Text);
-
                     cmd.Parameters.AddWithValue("@pass", txtPass.Text);
-
-
-
-
 
                     dr = cmd.ExecuteReader();
                     if (dr.Read())
@@ -73,6 +67,7 @@ namespace WebProject
                         Response.Cookies["UserName"].Value = txtUserName.Text.Trim();
                         Response.Cookies["Password"].Value = txtPass.Text.Trim();
 
+                        email = txtUserName.Text;
                         Response.Write("<script>alert('Login successful');</script>");
                         Response.Redirect("~/Home.html");
 
@@ -81,8 +76,6 @@ namespace WebProject
                     {
                         Response.Write("<script>alert('Wrong UserName Or passwoed ');</script>");
                     }
-
-
                 }
                 catch (Exception ex)
                 {
@@ -91,10 +84,7 @@ namespace WebProject
                 finally
                 {
                     connection.Close();
-
                 }
-
-
             }
         }
 
