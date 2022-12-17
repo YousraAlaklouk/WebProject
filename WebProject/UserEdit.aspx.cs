@@ -14,9 +14,9 @@ namespace WebProject
 
     public partial class UserEdit : System.Web.UI.Page
     {
-        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-UJH3HOQ\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True");
+        SqlConnection connection1 = new SqlConnection("Data Source=DESKTOP-CNJT2HB\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True");
 
-            protected void Page_Load(object sender, EventArgs e)
+        protected void Page_Load(object sender, EventArgs e)
             {
             }
 
@@ -29,13 +29,15 @@ namespace WebProject
             string female = "Female";
             string male = "Male";
             string neither = "Rether Not To Say";
-            connection.Open();
+            connection1.Open();
             DataTable dtResult = new DataTable();
-            if (connection.State == ConnectionState.Open)
+            if (connection1.State == ConnectionState.Open)
             {
                 try
                 {
-                    SqlCommand command = new SqlCommand("UPDATE Customer SET FullName  = " + txtFullName.Text + ", BirthDate =" + txtBirthDate.Text + ", Gender = @gender WHERE Email = @email", connection);
+                    SqlCommand command = new SqlCommand("UPDATE Customer SET FullName  = " + txtFullName.Text + ", BirthDate =" + txtBirthDate.Text + ", Gender = @gender WHERE Email = @email OR UserName = @name", connection1);
+                    command.Parameters.AddWithValue("@email", LoginForm.email);
+                    command.Parameters.AddWithValue("@name", LoginForm.email);
                     if (Female.Checked)
                     {
                         command.Parameters.AddWithValue("@gender", female);
@@ -73,7 +75,7 @@ namespace WebProject
                 }
                 finally
                 {
-                    connection.Close();
+                    connection1.Close();
 
                 }
 
@@ -82,26 +84,35 @@ namespace WebProject
         }
         protected void LoadDataBut_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            if (connection.State == ConnectionState.Open)
+            SqlDataReader dr;
+            connection1.Open();
+            DataTable dtResult = new DataTable();
+
+            if (connection1.State == ConnectionState.Open)
             {
 
                 try
                 {
-                    SqlCommand command = new SqlCommand("SELECT Email,UserName , FullName,BirthDate, Gender,Password FROM Customer WHERE  Email =" + LoginForm.email + " OR UserName = " + LoginForm.email + "", connection);
+
+                    string query = "SELECT Email,UserName , FullName,BirthDate, Gender,Password FROM Customer WHERE Email = @em OR UserName = @us";
+
+                    SqlCommand command = new SqlCommand(query, connection1);
+                    command.Parameters.AddWithValue("@em", LoginForm.email);
+                    command.Parameters.AddWithValue("@us", LoginForm.email);
                     command.CommandType = CommandType.Text;
-                    using (SqlDataReader sdr = command.ExecuteReader())
+                    dr = command.ExecuteReader();
+                    if (dr.Read())
                     {
-                        txtEmail.Text = sdr["Email"].ToString();
-                        txtUserName.Text = sdr["UserName"].ToString();
-                        txtFullName.Text = sdr["FullName"].ToString();
-                        txtBirthDate.Text = sdr["Birthdate"].ToString();
-                        if (sdr["Gender"].ToString() == "Female")
+                        txtEmail.Text = dr["Email"].ToString();
+                        txtUserName.Text = dr["UserName"].ToString();
+                        txtFullName.Text = dr["FullName"].ToString();
+                        txtBirthDate.Text = dr["BirthDate"].ToString();
+                        if (dr["Gender"].ToString() == "Female")
                         {
                             Female.Checked = true;
 
                         }
-                        else if (sdr["Gender"].ToString() == "Male")
+                        else if (dr["Gender"].ToString() == "Male")
                         {
                             Male.Checked = true;
                         }
@@ -110,7 +121,14 @@ namespace WebProject
                             NotToSay.Checked = true;
 
                         }
-                        txtPass.Text = sdr["Password"].ToString();
+                        txtPass.Text = dr["Password"].ToString();
+                        Response.Write("<script>alert('seccsiful ');</script>");
+
+                    }
+                    else
+                    {
+                        Response.Write("<script>alert('wrong ');</script>");
+
                     }
 
                 }
@@ -120,11 +138,68 @@ namespace WebProject
                 }
                 finally
                 {
-                    connection.Close();
+                    connection1.Close();
+
 
                 }
+
+
+
+
 
             }
         }
     }
 }
+                /*                
+
+                                    SqlCommand command = new SqlCommand("SELECT UserName FROM Customer WHERE Email=" + LoginForm.email.ToString() + " OR UserName =" + LoginForm.email.ToString() + " ", connection1);
+                                    txtUserName.Text = command.ExecuteScalar().ToString();
+
+                                    SqlCommand command2 = new SqlCommand("SELECT FullName FROM Customer WHERE Email=" + LoginForm.email.ToString()+ " OR UserName =" + LoginForm.email.ToString() + " ", connection1);
+                                    txtFullName.Text = command2.ExecuteScalar().ToString();
+
+                                    SqlCommand command3 = new SqlCommand("SELECT BirthDate FROM Customer WHERE Email=" + LoginForm.email.ToString() + " OR UserName =" + LoginForm.email.ToString()+ " ", connection1);
+                                    txtBirthDate.Text = command3.ExecuteScalar().ToString();
+
+
+                                    SqlCommand command4 = new SqlCommand("SELECT Gender FROM Customer WHERE Email=" + LoginForm.email.ToString() + " OR UserName =" + LoginForm.email.ToString() + " ", connection1);
+                                    if (command4.ExecuteScalar().ToString() == "Female")
+                                    {
+                                        Female.Checked = true;
+
+                                    }
+                                    else if (command4.ExecuteScalar().ToString() == "Male")
+                                    {
+                                        Male.Checked = true;
+                                    }
+                                    else
+                                    {
+                                        NotToSay.Checked = true;
+
+                                    }
+                                    SqlCommand command5 = new SqlCommand("SELECT Password FROM Customer WHERE Email=" + LoginForm.email.ToString() + " OR UserName =" +LoginForm.email.ToString()+" ", connection1);
+                                    txtPass.Text = command5.ExecuteScalar().ToString();
+                */
+                /*                        using (SqlDataReader sdr = command.ExecuteReader())
+                {
+                    txtEmail.Text = sdr["Email"].ToString();
+                    txtUserName.Text = sdr["UserName"].ToString();
+                    txtFullName.Text = sdr["FullName"].ToString();
+                    txtBirthDate.Text = sdr["Birthdate"].ToString();
+                    if (sdr["Gender"].ToString() == "Female")
+                    {
+                        Female.Checked = true;
+
+                    }
+                    else if (sdr["Gender"].ToString() == "Male")
+                    {
+                        Male.Checked = true;
+                    }
+                    else
+                    {
+                        NotToSay.Checked = true;
+
+                    }
+                    txtPass.Text = sdr["Password"].ToString();
+                }*/

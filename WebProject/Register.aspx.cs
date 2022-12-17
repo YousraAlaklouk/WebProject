@@ -14,7 +14,7 @@ namespace WebProject
 {
     public partial class Register : System.Web.UI.Page
     {
-        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-UJH3HOQ\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-CNJT2HB\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True");
         private bool checkEmail = false;
         private bool checkUsername = false;
         protected void Page_Load(object sender, EventArgs e)
