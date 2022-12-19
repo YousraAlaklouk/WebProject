@@ -15,8 +15,8 @@
             <asp:ImageButton ID="homeBtn" runat="server" ImageUrl="logo.png" width="200px" height="150px" OnClick="ImageButton1_Click" CausesValidation="false"/>
             <div id="menu">
                 <ul>
-                    <li><a href="AboutUs.html">About us</a></li>
-                    <li><a href="ContactUss.html"> Contact Us</a></li>
+                    <li><a href="AboutUs.aspx">About us</a></li>
+                    <li><a href="ContactUss.aspx"> Contact Us</a></li>
                     <li><a href="LoginForm.aspx">Login</a></li>
                 </ul>
             </div>

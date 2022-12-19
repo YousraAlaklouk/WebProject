@@ -22,7 +22,7 @@ namespace WebProject
 
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("~/Home.html");
+            Response.Redirect("~/Home.aspx");
         }
         protected void UpdateBut_Click(object sender, EventArgs e)
         {

@@ -16,7 +16,7 @@ namespace WebProject
 {
     public partial class LoginForm : System.Web.UI.Page
     {
-        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-CNJT2HB\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-UJH3HOQ\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True");
         public static int value = 0;
         public static string email = "";
         private bool check = true;
@@ -69,7 +69,7 @@ namespace WebProject
 
                         email = txtUserName.Text;
                         Response.Write("<script>alert('Login successful');</script>");
-                        Response.Redirect("~/Home.html");
+                        Response.Redirect("~/Home.aspx");
 
                     }
                     else
@@ -95,7 +95,7 @@ namespace WebProject
 
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("~/Home.html");
+            Response.Redirect("~/Home.aspx");
         }
 
         protected void PassLBtn_Click(object sender, EventArgs e)

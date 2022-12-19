@@ -18,7 +18,7 @@ namespace WebProject
 
         protected void homeBtn_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("Home.html");
+            Response.Redirect("Home.aspx");
         }
 
         protected void resetPassBtn_Click(object sender, EventArgs e)

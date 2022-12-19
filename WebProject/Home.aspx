@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="WebProject.Home" %>
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -6,19 +8,17 @@
     <title>Home</title>
 </head>
 
-<center><a href="Home.html"> <img src="logo.png" style="width: 200px; height: 150px;" /> </a></center>
+<center><a href="Home.aspx"> <img src="logo.png" style="width: 200px; height: 150px;" /> </a></center>
 <body>
     <div id="menu">
         <center>
             <ul>
-                <li><a href="AboutUss.html">About us</a></li>
-                <li><a href="ContactUss.html"> Contact Us</a></li>
-                <li><a href="LoginForm.aspx">Login</a></li>
-                <li><a href="UserEdit.aspx">Edit Your Profile</a></li>
                 <li><a href="TestInterface.aspx">Testing</a></li>
+                <li><a href="LoginForm.aspx">Login</a></li>
                 <li><a href="Register.aspx">Register</a></li>
-
-
+                <li><a href="AboutUss.aspx">About us</a></li>
+                <li><a href="ContactUss.aspx"> Contact Us</a></li>
+                <li><a href="UserEdit.aspx">Edit Your Profile</a></li>
             </ul>
         </center>
     </div>

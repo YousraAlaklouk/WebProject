@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ContactUss.aspx.cs" Inherits="WebProject.ContactUss" %>
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -7,17 +9,17 @@
     <title>Contact Us</title>
 </head>
 <div>
-    <center><a href="Home.html"> <img src="logo.png" style="width: 200px; height: 150px;" /> </a></center>
+    <center><a href="Home.aspx"> <img src="logo.png" style="width: 200px; height: 150px;" /> </a></center>
 </div>
 <body>
     <div id="menu">
         <center>
             <ul>
-                <li><a href="AboutUss.html">About us</a></li>
                 <li><a href="LoginForm.aspx">Login</a></li>
+                <li><a href="Register.aspx">Register</a></li>
+                <li><a href="AboutUss.aspx">About us</a></li>
                 <li><a href="UserEdit.aspx">Edit Your Profile</a></li>
                 <li><a href="TestInterface.aspx">Testing</a></li>
-                <li><a href="Register.aspx">Register</a></li>
             </ul>
         </center>
     </div>

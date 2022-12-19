@@ -104,7 +104,10 @@
 <br />
            </ItemTemplate>
        </asp:DataList>
-       <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:SecurityS&YConnectionString2 %>" SelectCommand="SELECT C.UserName, C.Email, R.TestID,T.TestName, R.Result FROM Result R INNER JOIN Customer C ON C.CustomerID =R.CustomerID INNER JOIN Tests T ON T.TestID = R.TestID"></asp:SqlDataSource>
+       <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:SecurityS&YConnectionString2 %>" SelectCommand="SELECT C.UserName, C.Email, R.TestID,T.TestName, R.Result FROM Result R INNER JOIN Customer C ON C.CustomerID =R.CustomerID INNER JOIN Tests T ON T.TestID = R.TestID where C.Username = @email)">
+    <SelectParameters>
+        <asp:SessionParameter Name="email" SessionField="email" Type="String" />
+    </SelectParameters></asp:SqlDataSource>
        </center> 
 
 

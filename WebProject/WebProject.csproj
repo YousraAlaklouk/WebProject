@@ -112,12 +112,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="aboutus.jpeg" />
-    <Content Include="AboutUss.html" />
-    <Content Include="ContactUss.html" />
+    <Content Include="AboutUss.aspx" />
+    <Content Include="ContactUss.aspx" />
     <Content Include="Emre-Atlier-Olca.jpg" />
     <Content Include="ForgotPassword.aspx" />
     <Content Include="GitHub_logo.png" />
-    <Content Include="Home.html" />
+    <Content Include="Home.aspx" />
     <Content Include="LoginForm.aspx" />
     <Content Include="logo.png" />
     <Content Include="PasswordCode.aspx" />
@@ -132,12 +132,33 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUss.aspx.cs">
+      <DependentUpon>AboutUss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUss.aspx.designer.cs">
+      <DependentUpon>AboutUss.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUss.aspx.cs">
+      <DependentUpon>ContactUss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUss.aspx.designer.cs">
+      <DependentUpon>ContactUss.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ForgotPassword.aspx.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ForgotPassword.aspx.designer.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="PasswordCode.aspx.cs">
       <DependentUpon>PasswordCode.aspx</DependentUpon>

@@ -13,10 +13,11 @@ namespace WebProject
 {
     public partial class TestInterface : System.Web.UI.Page
     {
-        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-CNJT2HB\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True");
+        string email = LoginForm.email;
+        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-UJH3HOQ\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True");
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(ReadData("select R.ID from Result as R inner join Customer as C on R.CustomerID = C.CustomerID where R.TestID = 'T1136.001' and(C.UserName = '"+LoginForm.email+"' or C.Email = '"+LoginForm.email+"')"))
+            if(ReadData("select R.ID from Result as R inner join Customer as C on R.CustomerID = C.CustomerID where R.TestID = 'T1136.001' and(C.UserName = '"+LoginForm.email+"' or C.Email = '"+LoginForm.email+"') and R.State = 1"))
             {
                 TestBut1.Enabled = false;
                 delBtn.Enabled = true;
@@ -29,7 +30,7 @@ namespace WebProject
         }
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("~/Home.html");
+            Response.Redirect("~/Home.aspx");
         }
 
         protected void TestBut1_Click(object sender, EventArgs e)
@@ -49,7 +50,7 @@ namespace WebProject
             {
                 try
                 {
-                    SqlCommand command = new SqlCommand("INSERT INTO Result (TestID,CustomerID,Result) VALUES ('T1136.001'," + GetData("select CustomerID from Customer where UserName = '" + LoginForm.email + "' or Email = '" + LoginForm.email + "'") + ", 'Test has succeeded a new user with the username #(username) and password #(password) has been created')", connection);
+                    SqlCommand command = new SqlCommand("INSERT INTO Result (TestID,CustomerID,Result,State) VALUES ('T1136.001'," + GetData("select CustomerID from Customer where UserName = '" + LoginForm.email + "' or Email = '" + LoginForm.email + "'") + ", 'Test has succeeded a new user with the username #(username) and password #(password) has been created' , 1)", connection);
 
                     int i = command.ExecuteNonQuery();
 
@@ -78,7 +79,7 @@ namespace WebProject
         public bool ReadData(string query)
         {
             bool check = false;
-            string connectionString = "Data Source=DESKTOP-CNJT2HB\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True";
+            string connectionString = "Data Source=DESKTOP-UJH3HOQ\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
@@ -106,7 +107,7 @@ namespace WebProject
         public string GetData(string query)
         {
             string id = "" ;
-            string connectionString = "Data Source=DESKTOP-CNJT2HB\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True";
+            string connectionString = "Data Source=DESKTOP-UJH3HOQ\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
@@ -148,9 +149,9 @@ namespace WebProject
             {
                 try
                 {
-                    
-                    SqlCommand command = new SqlCommand("delete from Result where ID ="+ GetData("select ID from Result where TestID = 'T1136.001' and CustomerID = "+ GetData("select CustomerID from Customer where UserName = '" + LoginForm.email + "' or Email = '" + LoginForm.email + "'")),connection);
-                    
+
+                    //SqlCommand command = new SqlCommand("delete from Result where ID ="+ GetData("select ID from Result where TestID = 'T1136.001' and CustomerID = "+ GetData("select CustomerID from Customer where UserName = '" + LoginForm.email + "' or Email = '" + LoginForm.email + "'")),connection);
+                    SqlCommand command = new SqlCommand("update Result set State = 0 where ID =" + GetData("select ID from Result where TestID = 'T1136.001' and CustomerID = " + GetData("select CustomerID from Customer where UserName = '" + LoginForm.email + "' or Email = '" + LoginForm.email + "'")), connection);
                     int i = command.ExecuteNonQuery();
                     if (i != 0)
                     {
