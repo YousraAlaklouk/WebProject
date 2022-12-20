@@ -14,7 +14,7 @@ namespace WebProject
     public partial class TestInterface : System.Web.UI.Page
     {
         string email = LoginForm.email;
-        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-UJH3HOQ\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-CNJT2HB\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True");
         protected void Page_Load(object sender, EventArgs e)
         {
             if(ReadData("select R.ID from Result as R inner join Customer as C on R.CustomerID = C.CustomerID where R.TestID = 'T1136.001' and(C.UserName = '"+LoginForm.email+"' or C.Email = '"+LoginForm.email+"') and R.State = 1"))
@@ -27,6 +27,18 @@ namespace WebProject
                 TestBut1.Enabled = true;
                 delBtn.Enabled = false;
             }
+
+            connection.Open();
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT C.UserName, C.Email,T.TestName,T.TestID ,R.Result From Result R INNER JOIN Customer C ON C.CustomerID=R.CustomerID INNER JOIN Tests T ON T.TestID=R.TestID WHERE C.Email='"+LoginForm.email+"' OR C.UserName = '"+LoginForm.email+"'";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            DataList2.DataSource = dt;
+            DataList2.DataBind();
+            connection.Close();
         }
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
@@ -79,7 +91,7 @@ namespace WebProject
         public bool ReadData(string query)
         {
             bool check = false;
-            string connectionString = "Data Source=DESKTOP-UJH3HOQ\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True";
+            string connectionString = "Data Source=DESKTOP-CNJT2HB\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
@@ -107,7 +119,7 @@ namespace WebProject
         public string GetData(string query)
         {
             string id = "" ;
-            string connectionString = "Data Source=DESKTOP-UJH3HOQ\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True";
+            string connectionString = "Data Source=DESKTOP-CNJT2HB\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
@@ -210,7 +222,7 @@ namespace WebProject
                 {
                     try
                     {
-                        SqlCommand command = new SqlCommand("INSERT INTO Result (TestID,CustomerID,Result) VALUES ('T1115'," + GetData("select CustomerID from Customer where UserName = '" + LoginForm.email + "' or Email = '" + LoginForm.email + "'") + ", 'A new T"+id+ ".txt file has been created and can be found in %temp% file')", connection);
+                        SqlCommand command = new SqlCommand("INSERT INTO Result (TestID,CustomerID,Result,State) VALUES ('T1115'," + GetData("select CustomerID from Customer where UserName = '" + LoginForm.email + "' or Email = '" + LoginForm.email + "'") + ", 'A new T"+id+ ".txt file has been created and can be found in %temp% file',1)", connection);
 
                         int i = command.ExecuteNonQuery();
 
@@ -240,5 +252,7 @@ namespace WebProject
             }
            
         }
+
+
     }
 }

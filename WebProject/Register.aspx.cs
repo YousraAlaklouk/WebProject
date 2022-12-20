@@ -123,7 +123,7 @@ namespace WebProject
         public bool ReadData(string query, string entity)
         {
             bool check = false;
-            string connectionString = "server=DESKTOP-UJH3HOQ\\SQLEXPRESS;database=SecurityS&Y;Trusted_Connection=True;";
+            string connectionString = "server=DESKTOP-CNJT2HB\\SQLEXPRESS;database=SecurityS&Y;Trusted_Connection=True;";
             using (SqlConnection connection = new SqlConnection(
                        connectionString))
             {

@@ -16,7 +16,7 @@ namespace WebProject
 {
     public partial class LoginForm : System.Web.UI.Page
     {
-        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-UJH3HOQ\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-CNJT2HB\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True");
         public static int value = 0;
         public static string email = "";
         private bool check = true;
@@ -136,7 +136,7 @@ namespace WebProject
         public bool ReadData(string query, string entity)
         {
             bool check = false;
-            string connectionString = "server=DESKTOP-UJH3HOQ\\SQLEXPRESS;database=SecurityS&Y;Trusted_Connection=True;";
+            string connectionString = "server=DESKTOP-CNJT2HB\\SQLEXPRESS;database=SecurityS&Y;Trusted_Connection=True;";
             using (SqlConnection connection = new SqlConnection(
                        connectionString))
             {

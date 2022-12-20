@@ -63,7 +63,7 @@ namespace WebProject
                 }
                 catch (Exception ex)
                 {
-                    Response.Write("<script>alert('" + ex + "');</script>");
+                    Response.Write("<script>alert('Catch');</script>");
                 }
                 finally
                 {
@@ -75,6 +75,8 @@ namespace WebProject
         {
             SqlDataReader dr;
             connection1.Open();
+            string female = "Female";
+            string male = "Male";
             DataTable dtResult = new DataTable();
 
             if (connection1.State == ConnectionState.Open)
@@ -94,27 +96,39 @@ namespace WebProject
                         txtUserName.Text = dr["UserName"].ToString();
                         txtFullName.Text = dr["FullName"].ToString();
                         txtBirthDate.Text = dr["BirthDate"].ToString();
-                        if (dr["Gender"].ToString() == "Female")
+
+
+
+                       if (dr["Gender"].ToString().Trim() == female)
                         {
                             Female.Checked = true;
+                            Male.Checked = false;
+
+                            NotToSay.Checked = false;
 
                         }
-                        else if (dr["Gender"].ToString() == "Male")
+                        else if (dr["Gender"].ToString().Trim() == male)
                         {
-                            Male.Checked = true;
+                            Male.Checked= true ;
+                            Female.Checked = false;
+
+                            NotToSay.Checked = false;
                         }
-                        else
+                        else if (dr["Gender"].ToString().Trim() == "Rether Not To Say")
                         {
+                            Female.Checked = false;
+                            Male.Checked = false;
                             NotToSay.Checked = true;
 
                         }
                         txtPass.Text = dr["Password"].ToString();
+
                         Response.Write("<script>alert('seccsiful ');</script>");
 
                     }
                     else
                     {
-                        Response.Write("<script>alert('"+LoginForm.email+"');</script>");
+                        Response.Write("<script>alert('couldnt load data');</script>");
 
                     }
 

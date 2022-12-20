@@ -112,12 +112,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="aboutus.jpeg" />
+    <Content Include="AboutUsReg.aspx" />
     <Content Include="AboutUss.aspx" />
+    <Content Include="ContactUsReg.aspx" />
     <Content Include="ContactUss.aspx" />
     <Content Include="Emre-Atlier-Olca.jpg" />
     <Content Include="ForgotPassword.aspx" />
     <Content Include="GitHub_logo.png" />
     <Content Include="Home.aspx" />
+    <Content Include="HomeReg.aspx" />
     <Content Include="LoginForm.aspx" />
     <Content Include="logo.png" />
     <Content Include="PasswordCode.aspx" />
@@ -132,12 +135,26 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUsReg.aspx.cs">
+      <DependentUpon>AboutUsReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUsReg.aspx.designer.cs">
+      <DependentUpon>AboutUsReg.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AboutUss.aspx.cs">
       <DependentUpon>AboutUss.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AboutUss.aspx.designer.cs">
       <DependentUpon>AboutUss.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUsReg.aspx.cs">
+      <DependentUpon>ContactUsReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUsReg.aspx.designer.cs">
+      <DependentUpon>ContactUsReg.aspx</DependentUpon>
     </Compile>
     <Compile Include="ContactUss.aspx.cs">
       <DependentUpon>ContactUss.aspx</DependentUpon>
@@ -159,6 +176,13 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeReg.aspx.cs">
+      <DependentUpon>HomeReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeReg.aspx.designer.cs">
+      <DependentUpon>HomeReg.aspx</DependentUpon>
     </Compile>
     <Compile Include="PasswordCode.aspx.cs">
       <DependentUpon>PasswordCode.aspx</DependentUpon>

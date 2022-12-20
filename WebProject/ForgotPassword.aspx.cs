@@ -18,12 +18,12 @@ namespace WebProject
 
         protected void homeBtn_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("Home.aspx");
+            Response.Redirect("HomeReg.aspx");
         }
 
         protected void resetPassBtn_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection("Data Source=DESKTOP-UJH3HOQ\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True");
+            SqlConnection connection = new SqlConnection("Data Source=DESKTOP-CNJT2HB\\SQLEXPRESS;Initial Catalog= SecurityS&Y;Integrated Security=True");
             SqlCommand cmd = new SqlCommand("update Customer set Password = '"+passTxt.Text+"' where Email ='"+email+"'", connection);
             connection.Open();
             cmd.ExecuteNonQuery();
