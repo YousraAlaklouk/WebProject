@@ -17,7 +17,7 @@
             <ul>
                 <li><a href="LoginForm.aspx">Login</a></li>
                 <li><a href="Register.aspx">Register</a></li>
-                <li><a href="AboutUss.aspx">About us</a></li>
+                <li><a href="AboutUsReg.aspx">About us</a></li>
             </ul>
         </center>
     </div>

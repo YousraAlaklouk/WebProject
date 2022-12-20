@@ -30,7 +30,7 @@ namespace WebProject
 
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("~/Home.aspx");
+            Response.Redirect("~/HomeReg.aspx");
         }
 
         protected void RegisterBut_Click(object sender, EventArgs e)

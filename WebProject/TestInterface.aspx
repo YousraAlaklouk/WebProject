@@ -30,7 +30,9 @@
             <ul>
                 <li><a href="ContactUss.aspx"> Contact Us</a></li>
                 <li><a href="UserEdit.aspx">Edit Your Profile</a></li>
-                <li><a href="AboutUs.aspx">AboutUs</a></li>
+                <li><a href="AboutUss.aspx">AboutUs</a></li>
+                <li><a href="LoginForm.aspx">Logout</a></li>
+
             </ul>
         </center>
     </div>
@@ -91,7 +93,7 @@
         &nbsp;</p>
         
    <center><asp:Label ID="Label2" runat="server" Text="Testing History" font-size="30px" ForeColor="White" Font-Bold="True" ></asp:Label>
-       <asp:DataList ID="DataList2" runat="server" Width="869px" Font-Bold="False" Font-Italic="False" Font-Names="Times New Roman"  AlternatingItemStyle-HorizontalAlign="Center" Font-Overline="False" Font-Size="Medium" Font-Strikeout="False" Font-Underline="False" ForeColor="White" HorizontalAlign="Center" Height="593px" >
+       <asp:DataList ID="DataList2" runat="server" Width="869px" Font-Bold="False" Font-Italic="False" Font-Names="Times New Roman"   Font-Overline="False" Font-Size="Medium" Font-Strikeout="False" Font-Underline="False" ForeColor="White" HorizontalAlign="Center" Height="593px" >
             <HeaderStyle Font-Bold="False" Font-Italic="False" Font-Names="Times New Roman" Font-Overline="False" Font-Size="Large" Font-Strikeout="False" Font-Underline="False" ForeColor="White" HorizontalAlign="Center" VerticalAlign="Middle" />
                                 <ItemTemplate>
 
@@ -104,7 +106,7 @@
                 <asp:Label ID="CountryLabel" runat="server" Text='<%# Eval("UserName") %>' />
                 <br />
                 Email:
-                <asp:Label ID="PriceLabel" runat="server" Text='<%# Eval("Email") %> ' />$
+                <asp:Label ID="PriceLabel" runat="server" Text='<%# Eval("Email") %> ' />
                 <br />
                 Test Name:
                 <asp:Label ID="QuantityLabel" runat="server" Text='<%# Eval("TestName") %>' />

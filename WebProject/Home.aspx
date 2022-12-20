@@ -17,6 +17,8 @@
                 <li><a href="AboutUss.aspx">About us</a></li>
                 <li><a href="ContactUss.aspx"> Contact Us</a></li>
                 <li><a href="UserEdit.aspx">Edit Your Profile</a></li>
+                <li><a href="LoginForm.aspx">Logout</a></li>
+
             </ul>
         </center>
     </div>

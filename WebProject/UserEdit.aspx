@@ -18,6 +18,20 @@
             <br />
             <br />
             <br />
+                <div id="menu">
+        <center>
+            <ul>
+                <li><a href="TestInterface.aspx">Testing</a></li>
+                <li><a href="AboutUss.aspx">About us</a></li>
+                <li><a href="ContactUss.aspx"> Contact Us</a></li>
+                <li><a href="LoginForm.aspx">Logout</a></li>
+
+            </ul>
+        </center>
+    </div>
+            <br />
+
+
                              <center> <asp:Label ID="Label1" runat="server" Text="Update Your Account Info" font-size="Large" ></asp:Label></center>
 
                              <br />

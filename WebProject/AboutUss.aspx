@@ -20,6 +20,8 @@
                 <li><a href="ContactUss.aspx"> Contact Us</a></li>
                 <li><a href="UserEdit.aspx">Edit Your Profile</a></li>
                 <li><a href="TestInterface.aspx">Testing</a></li>
+                <li><a href="LoginForm.aspx">Logout</a></li>
+
             </ul>
         </center>
     </div>

@@ -95,7 +95,7 @@ namespace WebProject
 
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("~/Home.aspx");
+            Response.Redirect("~/HomeReg.aspx");
         }
 
         protected void PassLBtn_Click(object sender, EventArgs e)
